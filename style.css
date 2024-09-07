@@ -1,0 +1,356 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6zrem;
+    background-color: #161b22;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.auth-buttons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.auth-buttons .btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    min-width: 500px;
+    border-radius: 10px;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: xx-small;
+    color: #000000;
+    margin-right: 20px;
+    margin-left: 1px;
+}
+
+.dropdown li {
+    padding: 10px 0;
+    display: block;
+    margin-bottom: -20px;
+    margin-right: 20px;
+    margin-left: 1px;
+}
+
+.dropdown a {
+    color: #000000;
+    font-size: xx-small;
+    margin-bottom: 2px; 
+}
+
+.nav-links li:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-color: #0d1117;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 4.5rem;
+    color: #fff;
+    margin-bottom: 0;
+    margin-right: 350px;
+}
+
+.content p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    margin-left: -34rem;
+}
+.form {
+    margin-top: 3rem;
+    margin-right: 58rem;
+    margin-bottom: 0.5rem;
+}
+.content input[type="email"] {
+    padding: 0.7rem;
+    width: 300px;
+    border: 1px solid #c9d1d9;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    margin-left: -445px;
+}
+
+.cta-buttons .btn {
+    padding: 0.6rem 1rem;
+    background-color: #7a2386;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+}
+
+.cta-buttons .btn-outline {
+    padding: 0.6rem 1rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #6f2386;
+    border-radius: 0.3rem;
+    margin-left: 0rem;
+}
+.organise {
+    padding: 10px;
+    margin-left: 60px;
+}
+.organisations {
+    display: inline;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px;
+    margin-left: 50px;
+}
+.AI {
+    font-size: 30px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+.acc {
+    font-size: 40px;
+    font-weight: 300;
+    color: rgb(61, 194, 61);
+    margin-right: 20px;
+    margin-left: 60px;
+}
+.platform {
+    font-size: 50px;
+    margin-right: 20px;
+    margin-left: 60px;
+    padding-right: 400px;
+}
+
+.container {
+    position: relative;
+    overflow: hidden; 
+}
+
+.slide-in {
+    opacity: 0;
+    transition: all 1.5s ease-in-out; 
+}
+
+.from-top {
+    transform: translateY(-100px);
+    border-radius: 2px;
+    max-height: 650px; 
+    width: auto;
+    z-index: 1;
+}
+
+.from-right {
+    position: absolute;
+    transform: translateX(100px); 
+    left: 60%;
+    top: 10%;
+    z-index: 4;
+    max-height: 650px;
+    width: auto;
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+
+
+/* Basic Footer Styling */
+.footer {
+    background-color: #0d1117;
+    color: white;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Newsletter Section */
+.footer-section.newsletter {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 40px;
+}
+
+.footer-section.newsletter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-section.newsletter p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.subscribe-btn {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #1b8f21;
+}
+
+/* Links Section */
+.footer-section.links {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.footer-section .column {
+    margin-right: 40px;
+}
+
+.footer-section .column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section .column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section .column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section .column ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-section .column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section.links {
+        flex-direction: column;
+    }
+
+    .footer-section .column {
+        margin-bottom: 20px;
+    }
+
+    .footer-section.newsletter {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content input[type="email"] {
+        width: 100%;
+    }
+}
